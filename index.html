@@ -2,8 +2,41 @@
 <html>
 <head>
     <title>Cafe Phin Club</title>
+    <style>
+        /* Center the entire content */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f5f5f5; /* Light background for contrast */
+        }
+
+        /* Style for each image */
+        img {
+            max-width: 90%; /* Ensure it doesn't overflow on small screens */
+            width: 600px; /* Default width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px 0; /* Space between images */
+            border-radius: 8px; /* Optional: rounded corners for a nicer look */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            img {
+                width: 100%; /* Full width on small screens */
+                max-width: 400px; /* Cap the size on phones */
+            }
+        }
+    </style>
 </head>
 <body>
-    <img src="salted_coffee.jpeg" alt="Coffee Shop Menu">
+    <img src="salted.jpg" alt="Salted Coffee Menu">
+    <img src="pandan.jpg" alt="Pandan Coffee Menu">
+    <img src="taro.jpg" alt="Taro Coffee Menu">
+    <img src="trial.jpg" alt="Trial Coffee Menu">
 </body>
 </html>
