@@ -11,11 +11,27 @@
             justify-content: center;
             min-height: 100vh; /* Full viewport height */
             margin: 0; /* Remove default margin */
-            background-color: #f5f5f5; /* Light background for contrast */
+            
+            /* Background settings */
+            background-color: #1d1e20; /* Solid background color (same as Grok page) */
+            
+            /* To use a background image instead, comment out the background-color above and uncomment the line below */
+            /* background-image: url('background.jpg'); */ /* Replace 'background.jpg' with your image file name */
+            /* background-size: cover; */ /* Ensures the image covers the entire background */
+            /* background-position: center; */ /* Centers the background image */
+            /* background-repeat: no-repeat; */ /* Prevents the image from repeating */
+
+        }
+
+        /* Style for the logo */
+        .logo {
+            max-width: 150px; /* Small size for the logo */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0; /* Space around the logo */
         }
 
         /* Style for each image */
-        img {
+        img:not(.logo) {
             max-width: 90%; /* Ensure it doesn't overflow on small screens */
             width: 600px; /* Default width for larger screens */
             height: auto; /* Maintain aspect ratio */
@@ -24,19 +40,53 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
         }
 
+        /* Style for the connect section */
+        .connect-section {
+            text-align: center;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .connect-section h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .connect-section a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        .connect-section a:hover {
+            text-decoration: underline;
+        }
+
         /* Responsive adjustments for smaller screens */
         @media (max-width: 768px) {
-            img {
+            img:not(.logo) {
                 width: 100%; /* Full width on small screens */
                 max-width: 400px; /* Cap the size on phones */
+            }
+
+            .logo {
+                max-width: 120px; /* Slightly smaller logo on mobile */
             }
         }
     </style>
 </head>
 <body>
+    <img src="logo.jpg" alt="Cafe Phin Club Logo" class="logo">
     <img src="salted.jpg" alt="Salted Coffee Menu">
     <img src="pandan.jpg" alt="Pandan Coffee Menu">
     <img src="taro.jpg" alt="Taro Coffee Menu">
     <img src="trial.jpg" alt="Trial Coffee Menu">
-</body>
+    
+    <div class="connect-section">
+        <h3>Connect with us</h3>
+        <a href="https://www.facebook.com/cafe.phin.club" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/cafephinclub/" target="_blank">Instagram</a>
+    </div>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'928d1271cf67dd1e',t:'MTc0MzM5NTAxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
